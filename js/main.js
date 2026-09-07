@@ -36,6 +36,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Desktop/Touch dropdown button support
+  const desktopDropdownButtons = document.querySelectorAll('.nav-dropdown > button');
+  desktopDropdownButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const parent = btn.closest('.nav-dropdown');
+      // Toggle focus class for touchscreen devices
+      document.querySelectorAll('.nav-dropdown').forEach(d => {
+        if (d !== parent) d.classList.remove('touch-open');
+      });
+      parent.classList.toggle('touch-open');
+    });
+  });
+
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('touch-open'));
+  });
+
   // Floating Back to Top Button
   const backToTopBtn = document.getElementById('back-to-top');
   if (backToTopBtn) {

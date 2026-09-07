@@ -24,118 +24,144 @@
     </div>
   </div>
 
-  <!-- HEADER WITH 4 CLEAN TABS -->
-  <header class="bg-white/95 backdrop-blur border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+  <!-- MODERN STICKY HEADER WITH 4 TABS & SOPHISTICATED DROPDOWNS -->
+  <header class="modern-header">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="flex items-center justify-between h-20">
         
         <!-- LOGO PLACEHOLDER -->
-        <a href="index.html" class="logo-placeholder">
+        <a href="index.html" class="logo-placeholder" aria-label="Peoria Home Cleaning Homepage">
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
           <span>LOGO PLACEHOLDER</span>
         </a>
 
         <!-- CENTERED 4-TAB NAVIGATION (DESKTOP) -->
-        <nav class="hidden md:flex items-center space-x-2 tab-navbar flex-1 max-w-xl mx-8" aria-label="Main Navigation">
-          <div class="tab-nav-divider"></div>
+        <nav class="hidden md:flex items-center tab-navbar flex-1 max-w-xl mx-6" aria-label="Main Navigation">
           
           <!-- TAB 1: HOME -->
           <a href="index.html" class="tab-nav-link active">Home</a>
           
-          <!-- TAB 2: SERVICES (DROPDOWN) -->
+          <!-- TAB 2: SERVICES (RICH DROPDOWN) -->
           <div class="nav-dropdown">
-            <button class="tab-nav-link focus:outline-none">
+            <button class="tab-nav-link focus:outline-none" aria-haspopup="true">
               Services
-              <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <svg class="w-3.5 h-3.5 text-slate-500 dropdown-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <div class="nav-dropdown-menu">
-              <a href="#services-overview" class="nav-dropdown-item">🧹 Standard Cleaning</a>
-              <a href="#services-overview" class="nav-dropdown-item">✨ Deep Cleaning</a>
-              <a href="#services-overview" class="nav-dropdown-item">📦 Move In / Move Out</a>
-              <a href="#services-overview" class="nav-dropdown-item">🛏️ Airbnb Turnover</a>
-              <a href="#services-overview" class="nav-dropdown-item">🏢 Commercial Care</a>
+            <div class="nav-dropdown-menu-services space-y-1">
+              <a href="#services-overview" class="dropdown-service-item group">
+                <span class="text-xl">🧹</span>
+                <div>
+                  <div class="text-xs font-bold text-slate-800 group-hover:text-sky-600">Standard Maintenance</div>
+                  <div class="text-[11px] text-slate-500">Scheduled regular maid care</div>
+                </div>
+              </a>
+              <a href="#services-overview" class="dropdown-service-item group">
+                <span class="text-xl">✨</span>
+                <div>
+                  <div class="text-xs font-bold text-slate-800 group-hover:text-emerald-600">Deep Sanitization</div>
+                  <div class="text-[11px] text-slate-500">Top-to-bottom intensive reset</div>
+                </div>
+              </a>
+              <a href="#services-overview" class="dropdown-service-item group">
+                <span class="text-xl">📦</span>
+                <div>
+                  <div class="text-xs font-bold text-slate-800 group-hover:text-sky-600">Move In / Move Out</div>
+                  <div class="text-[11px] text-slate-500">Turnkey empty home detailing</div>
+                </div>
+              </a>
+              <a href="#services-overview" class="dropdown-service-item group">
+                <span class="text-xl">🛏️</span>
+                <div>
+                  <div class="text-xs font-bold text-slate-800 group-hover:text-emerald-600">Airbnb Turnover</div>
+                  <div class="text-[11px] text-slate-500">Fast vacation rental turnovers</div>
+                </div>
+              </a>
             </div>
           </div>
 
-          <!-- TAB 3: LOCATIONS (9 CITIES DROPDOWN) -->
+          <!-- TAB 3: LOCATIONS (2-COLUMN GRID DROPDOWN) -->
           <div class="nav-dropdown">
-            <button class="tab-nav-link focus:outline-none">
+            <button class="tab-nav-link focus:outline-none" aria-haspopup="true">
               Locations
-              <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <svg class="w-3.5 h-3.5 text-slate-500 dropdown-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <div class="nav-dropdown-menu">
-              <a href="cities/phoenix.html" class="nav-dropdown-item">📍 Phoenix</a>
-              <a href="cities/scottsdale.html" class="nav-dropdown-item">📍 Scottsdale</a>
-              <a href="cities/tempe.html" class="nav-dropdown-item">📍 Tempe</a>
-              <a href="cities/paradise-valley.html" class="nav-dropdown-item">📍 Paradise Valley</a>
-              <a href="cities/mesa.html" class="nav-dropdown-item">📍 Mesa</a>
-              <a href="cities/chandler.html" class="nav-dropdown-item">📍 Chandler</a>
-              <a href="cities/gilbert.html" class="nav-dropdown-item">📍 Gilbert</a>
-              <a href="cities/glendale.html" class="nav-dropdown-item">📍 Glendale</a>
-              <a href="cities/goodyear.html" class="nav-dropdown-item">📍 Goodyear</a>
+            <div class="nav-dropdown-menu-locations">
+              <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2 px-1">Valley Service Areas</div>
+              <div class="grid grid-cols-2 gap-1.5">
+                <a href="cities/phoenix.html" class="dropdown-location-item">📍 Phoenix</a>
+                <a href="cities/chandler.html" class="dropdown-location-item">📍 Chandler</a>
+                <a href="cities/scottsdale.html" class="dropdown-location-item">📍 Scottsdale</a>
+                <a href="cities/gilbert.html" class="dropdown-location-item">📍 Gilbert</a>
+                <a href="cities/tempe.html" class="dropdown-location-item">📍 Tempe</a>
+                <a href="cities/glendale.html" class="dropdown-location-item">📍 Glendale</a>
+                <a href="cities/paradise-valley.html" class="dropdown-location-item">📍 Paradise Valley</a>
+                <a href="cities/goodyear.html" class="dropdown-location-item">📍 Goodyear</a>
+                <a href="cities/mesa.html" class="dropdown-location-item">📍 Mesa</a>
+              </div>
             </div>
           </div>
 
           <!-- TAB 4: CONTACT -->
           <a href="#estimate-form" class="tab-nav-link contact-highlight">Contact</a>
-
-          <div class="tab-nav-divider"></div>
         </nav>
 
-        <!-- HEADER RIGHT PHONE -->
-        <div class="hidden lg:flex items-center space-x-3">
-          <a href="tel:1234567890" class="text-sm font-extrabold text-slate-800 hover:text-sky-600 transition">
-            (123) 456-7890
+        <!-- HEADER RIGHT PHONE CTA -->
+        <div class="hidden lg:flex items-center">
+          <a href="tel:1234567890" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 text-[#0284c7] hover:bg-sky-100 font-extrabold text-sm border border-sky-200 transition">
+            <span>📞</span> (123) 456-7890
           </a>
         </div>
 
-        <!-- MOBILE MENU BUTTON -->
-        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="Toggle Navigation">
+        <!-- MOBILE MENU BUTTON (ANIMATED ACCESSIBLE) -->
+        <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none border border-slate-200" aria-label="Toggle Navigation">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
         </button>
       </div>
     </div>
 
-    <!-- MOBILE MENU DRAWER (4 TABS) -->
-    <div id="mobile-drawer" class="hidden md:hidden bg-white border-t border-slate-200 px-6 py-4 space-y-3 shadow-lg">
-      <a href="index.html" class="block font-bold text-sm text-sky-600">Home</a>
+    <!-- MOBILE MENU DRAWER -->
+    <div id="mobile-drawer" class="hidden md:hidden bg-white/98 backdrop-blur-md border-t border-slate-200 px-5 py-4 space-y-3 shadow-xl">
+      <a href="index.html" class="block font-bold text-sm text-sky-600 bg-sky-50 px-3 py-2 rounded-lg">Home</a>
       
-      <div>
-        <button data-mobile-dropdown="mobile-services-menu" class="w-full flex justify-between items-center font-bold text-sm text-slate-700 py-1 focus:outline-none">
-          Services
-          <svg class="w-4 h-4 chevron-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      <!-- Services Accordion -->
+      <div class="border-b border-slate-100 pb-2">
+        <button data-mobile-dropdown="mobile-services-menu" class="w-full flex justify-between items-center font-bold text-sm text-slate-700 px-3 py-2 focus:outline-none">
+          <span>🧹 Services</span>
+          <svg class="w-4 h-4 chevron-icon transition-transform text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="mobile-services-menu" class="hidden pl-3 py-2 space-y-1.5 border-l-2 border-sky-200 text-xs font-semibold text-slate-600">
-          <a href="#services-overview" class="block hover:text-sky-600">🧹 Standard Cleaning</a>
-          <a href="#services-overview" class="block hover:text-sky-600">✨ Deep Cleaning</a>
-          <a href="#services-overview" class="block hover:text-sky-600">📦 Move In / Move Out</a>
-          <a href="#services-overview" class="block hover:text-sky-600">🛏️ Airbnb Turnover</a>
-          <a href="#services-overview" class="block hover:text-sky-600">🏢 Commercial Care</a>
+        <div id="mobile-services-menu" class="hidden pl-3 py-2 space-y-1.5 text-xs font-semibold text-slate-600">
+          <a href="#services-overview" class="block py-1.5 px-2 hover:bg-slate-50 rounded">🧹 Standard Maintenance</a>
+          <a href="#services-overview" class="block py-1.5 px-2 hover:bg-slate-50 rounded">✨ Deep Sanitization</a>
+          <a href="#services-overview" class="block py-1.5 px-2 hover:bg-slate-50 rounded">📦 Move In / Move Out</a>
+          <a href="#services-overview" class="block py-1.5 px-2 hover:bg-slate-50 rounded">🛏️ Airbnb Turnover</a>
         </div>
       </div>
 
-      <div>
-        <button data-mobile-dropdown="mobile-locations-menu" class="w-full flex justify-between items-center font-bold text-sm text-slate-700 py-1 focus:outline-none">
-          Locations (9 Cities)
-          <svg class="w-4 h-4 chevron-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      <!-- Locations Accordion with 2-Column Chip Grid -->
+      <div class="border-b border-slate-100 pb-2">
+        <button data-mobile-dropdown="mobile-locations-menu" class="w-full flex justify-between items-center font-bold text-sm text-slate-700 px-3 py-2 focus:outline-none">
+          <span>📍 Locations (9 Cities)</span>
+          <svg class="w-4 h-4 chevron-icon transition-transform text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="mobile-locations-menu" class="hidden pl-3 py-2 space-y-1.5 border-l-2 border-emerald-200 text-xs font-semibold text-slate-600 max-h-60 overflow-y-auto">
-          <a href="cities/phoenix.html" class="block hover:text-emerald-600">📍 Phoenix</a>
-          <a href="cities/scottsdale.html" class="block hover:text-emerald-600">📍 Scottsdale</a>
-          <a href="cities/tempe.html" class="block hover:text-emerald-600">📍 Tempe</a>
-          <a href="cities/paradise-valley.html" class="block hover:text-emerald-600">📍 Paradise Valley</a>
-          <a href="cities/mesa.html" class="block hover:text-emerald-600">📍 Mesa</a>
-          <a href="cities/chandler.html" class="block hover:text-emerald-600">📍 Chandler</a>
-          <a href="cities/gilbert.html" class="block hover:text-emerald-600">📍 Gilbert</a>
-          <a href="cities/glendale.html" class="block hover:text-emerald-600">📍 Glendale</a>
-          <a href="cities/goodyear.html" class="block hover:text-emerald-600">📍 Goodyear</a>
+        <div id="mobile-locations-menu" class="hidden pt-2 pb-1">
+          <div class="mobile-chip-grid">
+            <a href="cities/phoenix.html" class="mobile-city-chip">📍 Phoenix</a>
+            <a href="cities/chandler.html" class="mobile-city-chip">📍 Chandler</a>
+            <a href="cities/scottsdale.html" class="mobile-city-chip">📍 Scottsdale</a>
+            <a href="cities/gilbert.html" class="mobile-city-chip">📍 Gilbert</a>
+            <a href="cities/tempe.html" class="mobile-city-chip">📍 Tempe</a>
+            <a href="cities/glendale.html" class="mobile-city-chip">📍 Glendale</a>
+            <a href="cities/paradise-valley.html" class="mobile-city-chip">📍 Paradise V.</a>
+            <a href="cities/goodyear.html" class="mobile-city-chip">📍 Goodyear</a>
+            <a href="cities/mesa.html" class="mobile-city-chip col-span-2 text-center justify-center">📍 Mesa</a>
+          </div>
         </div>
       </div>
 
-      <a href="#estimate-form" class="block font-bold text-sm text-emerald-600">Contact / Free Quote</a>
+      <a href="#estimate-form" class="block font-bold text-sm text-emerald-700 bg-emerald-50 px-3 py-2 rounded-lg">✨ Contact / Free Quote</a>
       
-      <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
-        <a href="tel:1234567890" class="w-full text-center py-2.5 rounded bg-emerald-50 text-[#059669] font-bold text-sm">📞 Call (123) 456-7890</a>
+      <div class="pt-2">
+        <a href="tel:1234567890" class="w-full text-center py-2.5 rounded-lg bg-emerald-600 text-white font-bold text-sm shadow-md block">📞 Call (123) 456-7890</a>
       </div>
     </div>
   </header>
@@ -441,6 +467,97 @@
               We dust all nightstands, lamps, and furniture. Carpets are deep-vacuumed with HEPA filtration to lower allergens, and beds are neatly styled or refreshed upon request.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALLEY SERVICE AREAS & CITIES COVERED (RICH SEO INTERNAL LINKING) -->
+    <section class="py-16 bg-white border-t border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-emerald-100 text-[#059669] font-extrabold text-xs uppercase tracking-wider mb-2">
+            Valley Wide Coverage
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0f172a]">
+            Explore House Cleaning Across The Valley
+          </h2>
+          <p class="text-slate-600 text-xs sm:text-sm mt-2">
+            Select your city below for specialized local maid services, deep cleaning, and move-out housekeeping:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a href="cities/phoenix.html" class="p-5 rounded-xl border border-slate-200 hover:border-sky-400 hover:shadow-md transition bg-slate-50 hover:bg-white group block text-left">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-extrabold text-lg text-slate-800 group-hover:text-sky-600 transition">📍 Phoenix</h3>
+              <span class="text-xs font-bold text-sky-600">View Page →</span>
+            </div>
+            <p class="text-xs text-slate-600">Arcadia, Biltmore, Desert Ridge, Norterra & Ahwatukee maid services.</p>
+          </a>
+
+          <a href="cities/scottsdale.html" class="p-5 rounded-xl border border-slate-200 hover:border-emerald-400 hover:shadow-md transition bg-slate-50 hover:bg-white group block text-left">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-extrabold text-lg text-slate-800 group-hover:text-emerald-600 transition">📍 Scottsdale</h3>
+              <span class="text-xs font-bold text-emerald-600">View Page →</span>
+            </div>
+            <p class="text-xs text-slate-600">Old Town, DC Ranch, Gainey Ranch, Troon North & luxury estate care.</p>
+          </a>
+
+          <a href="cities/tempe.html" class="p-5 rounded-xl border border-slate-200 hover:border-sky-400 hover:shadow-md transition bg-slate-50 hover:bg-white group block text-left">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-extrabold text-lg text-slate-800 group-hover:text-sky-600 transition">📍 Tempe</h3>
+              <span class="text-xs font-bold text-sky-600">View Page →</span>
+            </div>
+            <p class="text-xs text-slate-600">Downtown, Mill Ave, Shalimar & residential recurring cleaning.</p>
+          </a>
+
+          <a href="cities/paradise-valley.html" class="p-5 rounded-xl border border-slate-200 hover:border-emerald-400 hover:shadow-md transition bg-slate-50 hover:bg-white group block text-left">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-extrabold text-lg text-slate-800 group-hover:text-emerald-600 transition">📍 Paradise Valley</h3>
+              <span class="text-xs font-bold text-emerald-600">View Page →</span>
+            </div>
+            <p class="text-xs text-slate-600">White-glove estate housekeeping, natural stone & high-end sanitization.</p>
+          </a>
+
+          <a href="cities/mesa.html" class="p-5 rounded-xl border border-slate-200 hover:border-sky-400 hover:shadow-md transition bg-slate-50 hover:bg-white group block text-left">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-extrabold text-lg text-slate-800 group-hover:text-sky-600 transition">📍 Mesa</h3>
+              <span class="text-xs font-bold text-sky-600">View Page →</span>
+            </div>
+            <p class="text-xs text-slate-600">Eastmark, Red Mountain, Dobson Ranch, Las Sendas & family home care.</p>
+          </a>
+
+          <a href="cities/chandler.html" class="p-5 rounded-xl border border-slate-200 hover:border-emerald-400 hover:shadow-md transition bg-slate-50 hover:bg-white group block text-left">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-extrabold text-lg text-slate-800 group-hover:text-emerald-600 transition">📍 Chandler</h3>
+              <span class="text-xs font-bold text-emerald-600">View Page →</span>
+            </div>
+            <p class="text-xs text-slate-600">Ocotillo, Fulton Ranch, Sun Lakes tile and grout & deep cleanings.</p>
+          </a>
+
+          <a href="cities/gilbert.html" class="p-5 rounded-xl border border-slate-200 hover:border-sky-400 hover:shadow-md transition bg-slate-50 hover:bg-white group block text-left">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-extrabold text-lg text-slate-800 group-hover:text-sky-600 transition">📍 Gilbert</h3>
+              <span class="text-xs font-bold text-sky-600">View Page →</span>
+            </div>
+            <p class="text-xs text-slate-600">Val Vista Lakes, Power Ranch, Morrison Ranch & pet-safe maid service.</p>
+          </a>
+
+          <a href="cities/glendale.html" class="p-5 rounded-xl border border-slate-200 hover:border-emerald-400 hover:shadow-md transition bg-slate-50 hover:bg-white group block text-left">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-extrabold text-lg text-slate-800 group-hover:text-emerald-600 transition">📍 Glendale</h3>
+              <span class="text-xs font-bold text-emerald-600">View Page →</span>
+            </div>
+            <p class="text-xs text-slate-600">Arrowhead Ranch, Westgate, Historic District & move-out turnover.</p>
+          </a>
+
+          <a href="cities/goodyear.html" class="p-5 rounded-xl border border-slate-200 hover:border-sky-400 hover:shadow-md transition bg-slate-50 hover:bg-white group block text-left">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-extrabold text-lg text-slate-800 group-hover:text-sky-600 transition">📍 Goodyear</h3>
+              <span class="text-xs font-bold text-sky-600">View Page →</span>
+            </div>
+            <p class="text-xs text-slate-600">Estrella Mountain, PebbleCreek, Palm Valley & desert dust care.</p>
+          </a>
         </div>
       </div>
     </section>
