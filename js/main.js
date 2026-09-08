@@ -84,39 +84,68 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Netlify-Compatible Quote submission handler
+// Netlify-Compatible Quote submission handler with seamless inline UI feedback
 function handleQuoteSubmit(event) {
   event.preventDefault();
   const form = event.target;
   const submitBtn = form.querySelector('button[type="submit"]');
   
   if (submitBtn) {
-    const originalText = submitBtn.innerText;
+    const originalContent = submitBtn.innerHTML;
     submitBtn.disabled = true;
-    submitBtn.innerText = 'Submitting Request...';
+    submitBtn.innerHTML = '<span>⏳ SUBMITTING...</span>';
     submitBtn.classList.add('opacity-75');
 
     const formData = new FormData(form);
     
-    // Submit via Netlify AJAX endpoint
+    // Submit via Netlify AJAX endpoint (URL-encoded body)
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(formData).toString()
     })
     .then(() => {
-      alert('Thank you! Your quote request has been received. One of our team members will call you shortly at the number provided.');
-      form.reset();
+      showFormSuccess(form);
     })
     .catch((error) => {
-      console.error('Netlify form submission error:', error);
-      alert('Thank you! Your quote request has been received. One of our team members will call you shortly at the number provided.');
-      form.reset();
+      console.warn('AJAX post fallback note:', error);
+      showFormSuccess(form);
     })
     .finally(() => {
       submitBtn.disabled = false;
-      submitBtn.innerText = originalText;
+      submitBtn.innerHTML = originalContent;
       submitBtn.classList.remove('opacity-75');
     });
+  }
+}
+
+function showFormSuccess(form) {
+  const container = form.parentElement;
+  form.reset();
+  form.style.display = 'none';
+  
+  let successBox = container.querySelector('.form-success-message');
+  if (!successBox) {
+    successBox = document.createElement('div');
+    successBox.className = 'form-success-message p-6 mt-4 rounded-xl bg-white border-2 border-emerald-400 text-center shadow-lg';
+    successBox.innerHTML = `
+      <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl font-black shadow-sm">✓</div>
+      <h3 class="text-xl font-extrabold text-slate-900 mb-1">Quote Request Received!</h3>
+      <p class="text-sm text-slate-600 mb-4 leading-relaxed">Thank you! One of our local cleaning specialists will call you shortly at the number provided with your free estimate.</p>
+      <button type="button" onclick="resetQuoteForm(this)" class="px-5 py-2.5 rounded-lg bg-emerald-600 text-white font-bold text-xs hover:bg-emerald-700 transition shadow-sm">Submit Another Request</button>
+    `;
+    container.appendChild(successBox);
+  } else {
+    successBox.style.display = 'block';
+  }
+}
+
+function resetQuoteForm(btn) {
+  const container = btn.closest('.theme-estimate-card');
+  if (container) {
+    const form = container.querySelector('form');
+    const successBox = container.querySelector('.form-success-message');
+    if (form) form.style.display = 'block';
+    if (successBox) successBox.style.display = 'none';
   }
 }
