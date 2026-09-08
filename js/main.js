@@ -1,7 +1,18 @@
-// Peoria Home Cleaning Services - Interactive & Modern UI Scripts
+// Peoria Home Cleaning Services - Interactive, Auto-Slider & Modern UI Scripts
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile drawer navigation toggle
+  // 1. Hero Background Auto-Switching Slideshow Controller
+  const heroSlides = document.querySelectorAll('.hero-slide');
+  if (heroSlides.length > 1) {
+    let currentSlideIndex = 0;
+    setInterval(() => {
+      heroSlides[currentSlideIndex].classList.remove('active');
+      currentSlideIndex = (currentSlideIndex + 1) % heroSlides.length;
+      heroSlides[currentSlideIndex].classList.add('active');
+    }, 5000);
+  }
+
+  // 2. Mobile drawer navigation toggle
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileDrawer = document.getElementById('mobile-drawer');
 
@@ -19,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Mobile submenu accordion toggles
+  // 3. Mobile submenu accordion toggles
   const mobileDropdownToggles = document.querySelectorAll('[data-mobile-dropdown]');
   mobileDropdownToggles.forEach(toggle => {
     toggle.addEventListener('click', (e) => {
@@ -36,13 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Desktop/Touch dropdown button support
+  // 4. Desktop/Touch dropdown button support
   const desktopDropdownButtons = document.querySelectorAll('.nav-dropdown > button');
   desktopDropdownButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       const parent = btn.closest('.nav-dropdown');
-      // Toggle focus class for touchscreen devices
       document.querySelectorAll('.nav-dropdown').forEach(d => {
         if (d !== parent) d.classList.remove('touch-open');
       });
@@ -54,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('touch-open'));
   });
 
-  // Floating Back to Top Button
+  // 5. Floating Back to Top Button
   const backToTopBtn = document.getElementById('back-to-top');
   if (backToTopBtn) {
     window.addEventListener('scroll', () => {
