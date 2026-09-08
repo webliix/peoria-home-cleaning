@@ -84,35 +84,71 @@ h1, h2, h3, h4, .font-heading {
 }
 
 /* ==========================================================================
-   LOGO PLACEHOLDER
+   OFFICIAL BRAND LOGO
    ========================================================================== */
-.logo-placeholder {
+.site-logo-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.875rem;
-  border: 1.5px dashed #94a3b8;
-  border-radius: 0.75rem;
-  background: var(--theme-bg-subtle);
-  color: var(--theme-slate-700);
-  font-weight: 700;
-  font-size: 0.875rem;
-  letter-spacing: 0.05em;
+  justify-content: center;
   text-decoration: none;
-  transition: all 0.25s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  height: 100%;
+  flex-shrink: 0;
+  padding: 0.65rem 0;
 }
 
-.logo-placeholder:hover {
-  border-color: var(--theme-accent-green);
-  color: var(--theme-accent-green-hover);
-  background: var(--theme-accent-green-light);
-  transform: translateY(-1px);
+.site-logo-link:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
 }
 
-.logo-placeholder svg {
-  width: 1.25rem;
-  height: 1.25rem;
-  stroke: currentColor;
+.site-logo-img {
+  height: 38px;
+  max-height: 42px;
+  max-width: 175px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .site-logo-img {
+    height: 42px;
+    max-height: 46px;
+    max-width: 195px;
+  }
+}
+
+.footer-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 0.4rem 0.85rem;
+  border-radius: 0.875rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+
+.footer-logo-wrap:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3);
+}
+
+.footer-logo-img {
+  height: 34px;
+  max-width: 160px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .footer-logo-img {
+    height: 38px;
+    max-width: 180px;
+  }
 }
 
 /* ==========================================================================
@@ -988,4 +1024,82 @@ h1, h2, h3, h4, .font-heading {
   background-color: var(--theme-bg-subtle);
   color: var(--theme-accent-green-hover);
   transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS & TOUCH OPTIMIZATION
+   ========================================================================== */
+@media (max-width: 640px) {
+  /* Prevent horizontal scrolling & typography overflow */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Compact header with proportional logo and touch-friendly toggle */
+  .modern-header .h-20 {
+    height: 4.25rem;
+  }
+  
+  .site-logo-img {
+    height: 36px;
+    max-height: 40px;
+    max-width: 160px;
+  }
+
+  /* Full-width action buttons on mobile */
+  .btn-theme-action {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.85rem 1.25rem;
+    font-size: 0.9375rem;
+  }
+
+  /* Form & inputs comfort on small screens (prevent iOS zoom on input focus) */
+  .clean-form-input, .clean-form-select {
+    font-size: 16px;
+    padding: 0.75rem 0.875rem;
+  }
+
+  /* Card padding and shadows for mobile */
+  .theme-hero-card,
+  .theme-estimate-card,
+  .modern-service-card {
+    padding: 1.5rem 1.125rem;
+    border-radius: 1rem;
+  }
+
+  /* Radio pill touch target sizing */
+  .clean-radio-pill {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.8125rem;
+  }
+
+  /* Footer touch targets & spacing */
+  footer {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .footer-logo-wrap {
+    padding: 0.4rem 0.75rem;
+  }
+
+  .footer-logo-img {
+    height: 32px;
+    max-width: 150px;
+  }
+
+  /* Maps responsive container */
+  .map-container-relative {
+    height: 220px;
+  }
+
+  /* Back to top placement */
+  .btn-back-to-top {
+    bottom: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+  }
 }
