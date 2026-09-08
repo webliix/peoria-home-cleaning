@@ -530,13 +530,13 @@ h1, h2, h3, h4, .font-heading {
   border-radius: 9999px;
   background: #ffffff;
   border: 1px solid var(--theme-accent-green-border);
-  color: var(--theme-accent-green-hover);
+  color: var(--theme-primary-blue);
   font-size: 0.8125rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 1.25rem;
-  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.12);
+  box-shadow: 0 2px 6px rgba(0, 43, 92, 0.12);
 }
 
 .hero-card-title {
@@ -584,7 +584,7 @@ h1, h2, h3, h4, .font-heading {
   text-decoration: none;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 4px 14px rgba(0, 43, 92, 0.3);
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
   max-width: 280px;
@@ -600,7 +600,7 @@ h1, h2, h3, h4, .font-heading {
 .btn-theme-action:hover {
   background: var(--theme-btn-green-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.5);
+  box-shadow: 0 8px 20px rgba(0, 43, 92, 0.4);
 }
 
 /* ==========================================================================
@@ -652,7 +652,7 @@ h1, h2, h3, h4, .font-heading {
 
 .estimate-pill {
   background: #ffffff;
-  color: var(--theme-accent-green-hover);
+  color: var(--theme-primary-blue);
   font-size: 0.75rem;
   font-weight: 800;
   padding: 0.25rem 0.75rem;
@@ -660,7 +660,7 @@ h1, h2, h3, h4, .font-heading {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   border: 1px solid var(--theme-accent-green-border);
-  box-shadow: 0 1px 3px rgba(16, 185, 129, 0.12);
+  box-shadow: 0 1px 3px rgba(0, 43, 92, 0.12);
 }
 
 .form-required-note {
