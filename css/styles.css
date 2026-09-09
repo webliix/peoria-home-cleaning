@@ -689,6 +689,12 @@ h1, h2, h3, h4, .font-heading {
   outline: none;
 }
 
+textarea.clean-form-input {
+  min-height: 85px;
+  resize: vertical;
+  font-family: inherit;
+}
+
 .clean-form-input:focus, .clean-form-select:focus {
   border-color: var(--theme-primary-blue);
   box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
