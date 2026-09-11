@@ -1,6 +1,22 @@
 // Peoria Home Cleaning Services - Interactive, Auto-Slider & Modern UI Scripts
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Navbar scroll detection to merge seamlessly with landing page
+  const header = document.querySelector('.modern-header');
+  if (header) {
+    const handleScroll = () => {
+      if (window.scrollY > 15) {
+        header.classList.add('scrolled');
+      } else {
+        if (!header.classList.contains('drawer-open')) {
+          header.classList.remove('scrolled');
+        }
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  }
+
   // 1. Hero Background Auto-Switching Slideshow Controller
   const heroSlides = document.querySelectorAll('.hero-slide');
   if (heroSlides.length > 1) {
@@ -18,7 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mobileMenuBtn && mobileDrawer) {
     mobileMenuBtn.addEventListener('click', () => {
-      mobileDrawer.classList.toggle('hidden');
+      const isClosed = mobileDrawer.classList.toggle('hidden');
+      if (header) {
+        if (!isClosed) {
+          header.classList.add('drawer-open');
+        } else if (window.scrollY <= 15) {
+          header.classList.remove('drawer-open');
+        }
+      }
     });
 
     // Close mobile drawer when clicking a link inside
