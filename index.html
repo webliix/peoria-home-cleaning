@@ -8,7 +8,7 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://peoriahomecleaning.com/">
 
-    <!-- Mobile Browser Address Bar & Status Bar Theme Color -->
+  <!-- Mobile Browser Address Bar & Status Bar Theme Color -->
   <meta name="theme-color" content="#002b5c" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#002b5c" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#002b5c">
@@ -31,34 +31,33 @@
 <body class="bg-white">
 
   <!-- TOP BAR (PROMINENT CALL FOR FREE QUOTE) -->
-  <div class="bg-[#002b5c] text-white py-2.5 px-4 border-b border-[#1a4980]">
-    <div class="max-w-7xl mx-auto flex justify-center items-center gap-2 text-sm sm:text-base font-semibold text-center">
+  <div class="bg-[#002b5c] text-white py-2 px-4 border-b border-[#1a4980]">
+    <div class="max-w-7xl mx-auto flex justify-center items-center gap-2 text-xs sm:text-sm font-semibold text-center">
       <span class="text-slate-200">Call For Free Quote:</span>
-      <a href="tel:1234567890" class="text-[#5b8ec5] font-black text-base sm:text-lg hover:text-sky-300 transition inline-flex items-center gap-1.5 whitespace-nowrap">
+      <a href="tel:1234567890" class="text-[#93c5fd] font-extrabold text-sm sm:text-base hover:text-white transition inline-flex items-center gap-1.5 whitespace-nowrap">
         📞 (123) 456-7890
       </a>
     </div>
   </div>
 
-  <!-- MODERN STICKY HEADER WITH 4 TABS & SOPHISTICATED DROPDOWNS -->
+  <!-- MODERN HEADER WITH REFERENCE TYPE NAVIGATION -->
   <header class="modern-header">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
         <!-- BRAND LOGO -->
         <a href="index.html" class="site-logo-link" aria-label="Peoria Home Cleaning Homepage">
-          <img src="images/logo.svg" alt="Peoria Home Cleaning" class="site-logo-img">
+          <img src="images/logo.svg" alt="Peoria Home Cleaning Services" class="site-logo-img">
         </a>
 
-        <!-- CENTERED 4-TAB NAVIGATION (DESKTOP) -->
-        <nav class="hidden md:flex items-center tab-navbar flex-1 max-w-xl mx-6" aria-label="Main Navigation">
+        <!-- REFERENCE TYPE CENTERED NAVIGATION (DESKTOP) -->
+        <nav class="hidden lg:flex items-center tab-navbar" aria-label="Main Navigation">
+          <!-- 1. HOME (ACTIVE WITH UNDERLINE BAR) -->
+          <a href="index.html" class="ref-nav-link active">Home</a>
           
-          <!-- TAB 1: HOME -->
-          <a href="index.html" class="tab-nav-link active">Home</a>
-          
-          <!-- TAB 2: SERVICES (MODERN SLEEK DROPDOWN) -->
+          <!-- 2. SERVICES DROPDOWN -->
           <div class="nav-dropdown">
-            <button class="tab-nav-link focus:outline-none" aria-haspopup="true">
+            <button class="ref-nav-link focus:outline-none" aria-haspopup="true">
               Services
               <svg class="w-3.5 h-3.5 text-slate-500 dropdown-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
@@ -67,7 +66,7 @@
               
               <a href="#services-overview" class="dropdown-service-item group">
                 <div>
-                  <div class="dropdown-service-title">Standard Maintenance</div>
+                  <div class="dropdown-service-title">Standard Cleaning</div>
                   <div class="dropdown-service-desc">Scheduled weekly & bi-weekly maid care</div>
                 </div>
                 <span class="dropdown-item-arrow">→</span>
@@ -75,7 +74,7 @@
 
               <a href="#services-overview" class="dropdown-service-item group">
                 <div>
-                  <div class="dropdown-service-title">Deep Sanitization</div>
+                  <div class="dropdown-service-title">Deep Cleaning</div>
                   <div class="dropdown-service-desc">Intensive top-to-bottom seasonal reset</div>
                 </div>
                 <span class="dropdown-item-arrow">→</span>
@@ -91,22 +90,22 @@
 
               <a href="#services-overview" class="dropdown-service-item group">
                 <div>
-                  <div class="dropdown-service-title">Airbnb Turnover</div>
-                  <div class="dropdown-service-desc">Fast vacation rental housekeeping</div>
+                  <div class="dropdown-service-title">Custom Cleaning</div>
+                  <div class="dropdown-service-desc">Tailored to your specific schedule & needs</div>
                 </div>
                 <span class="dropdown-item-arrow">→</span>
               </a>
 
               <div class="dropdown-footer-cta">
-                <span>Free phone quotes:</span>
+                <span>Free phone estimates:</span>
                 <a href="tel:1234567890" class="dropdown-footer-link">(123) 456-7890</a>
               </div>
             </div>
           </div>
 
-          <!-- TAB 3: LOCATIONS (MODERN 2-COLUMN GRID DROPDOWN) -->
+          <!-- 3. LOCATIONS DROPDOWN -->
           <div class="nav-dropdown">
-            <button class="tab-nav-link focus:outline-none" aria-haspopup="true">
+            <button class="ref-nav-link focus:outline-none" aria-haspopup="true">
               Locations
               <svg class="w-3.5 h-3.5 text-slate-500 dropdown-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
@@ -159,43 +158,50 @@
             </div>
           </div>
 
-          <!-- TAB 4: CONTACT -->
-          <a href="#estimate-form" class="tab-nav-link contact-highlight">Contact</a>
+          <!-- 4. ABOUT US -->
+          <a href="#about-us" class="ref-nav-link">About Us</a>
+
+          <!-- 5. REVIEWS -->
+          <a href="#reviews" class="ref-nav-link">Reviews</a>
+
+          <!-- 6. CONTACT -->
+          <a href="#estimate-form" class="ref-nav-link">Contact</a>
         </nav>
 
-        <!-- HEADER RIGHT PHONE CTA -->
-        <div class="hidden lg:flex items-center">
-          <a href="tel:1234567890" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#e8f0f8] text-[#002b5c] hover:bg-[#d5e5f5] font-extrabold text-sm border border-[#99bfe6] transition">
-            (123) 456-7890
+        <!-- RIGHT HEADER CTA (NAVY PILL BUTTON) -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="tel:1234567890" class="ref-nav-cta">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <span>Book Now</span>
           </a>
         </div>
 
-        <!-- MOBILE MENU BUTTON (ANIMATED ACCESSIBLE) -->
-        <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none border border-slate-200" aria-label="Toggle Navigation">
+        <!-- MOBILE MENU TOGGLE BUTTON -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none border border-slate-200" aria-label="Toggle Navigation">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
         </button>
       </div>
     </div>
 
     <!-- MOBILE MENU DRAWER -->
-    <div id="mobile-drawer" class="hidden md:hidden bg-white/98 backdrop-blur-md border-t border-slate-200 px-5 py-4 space-y-3 shadow-xl">
+    <div id="mobile-drawer" class="hidden lg:hidden bg-white/98 backdrop-blur-md border-t border-slate-200 px-5 py-4 space-y-3 shadow-xl">
       <a href="index.html" class="block font-bold text-sm text-[#002b5c] bg-[#e8f0f8] px-3 py-2 rounded-lg">Home</a>
       
-      <!-- Services Accordion -->
+      <!-- Mobile Services Accordion -->
       <div class="border-b border-slate-100 pb-2">
         <button data-mobile-dropdown="mobile-services-menu" class="w-full flex justify-between items-center font-bold text-sm text-slate-700 px-3 py-2 focus:outline-none">
           <span>Services</span>
           <svg class="w-4 h-4 chevron-icon transition-transform text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div id="mobile-services-menu" class="hidden pl-3 py-2 space-y-1.5 text-xs font-semibold text-slate-600">
-          <a href="#services-overview" class="block py-1.5 px-2 hover:bg-slate-50 rounded">Standard Maintenance</a>
-          <a href="#services-overview" class="block py-1.5 px-2 hover:bg-slate-50 rounded">Deep Sanitization</a>
+          <a href="#services-overview" class="block py-1.5 px-2 hover:bg-slate-50 rounded">Standard Cleaning</a>
+          <a href="#services-overview" class="block py-1.5 px-2 hover:bg-slate-50 rounded">Deep Cleaning</a>
           <a href="#services-overview" class="block py-1.5 px-2 hover:bg-slate-50 rounded">Move In / Move Out</a>
-          <a href="#services-overview" class="block py-1.5 px-2 hover:bg-slate-50 rounded">Airbnb Turnover</a>
+          <a href="#services-overview" class="block py-1.5 px-2 hover:bg-slate-50 rounded">Custom Cleaning</a>
         </div>
       </div>
 
-      <!-- Locations Accordion with 2-Column Chip Grid -->
+      <!-- Mobile Locations Accordion -->
       <div class="border-b border-slate-100 pb-2">
         <button data-mobile-dropdown="mobile-locations-menu" class="w-full flex justify-between items-center font-bold text-sm text-slate-700 px-3 py-2 focus:outline-none">
           <span>Locations (9 Cities)</span>
@@ -216,51 +222,169 @@
         </div>
       </div>
 
+      <a href="#about-us" class="block font-bold text-sm text-slate-700 px-3 py-2 hover:bg-slate-50 rounded-lg">About Us</a>
+      <a href="#reviews" class="block font-bold text-sm text-slate-700 px-3 py-2 hover:bg-slate-50 rounded-lg">Reviews</a>
       <a href="#estimate-form" class="block font-bold text-sm text-[#002b5c] bg-[#f0f5fa] px-3 py-2 rounded-lg">Contact / Free Quote</a>
       
       <div class="pt-2">
-        <a href="tel:1234567890" class="w-full text-center py-2.5 rounded-lg bg-[#002b5c] text-white font-bold text-sm shadow-md block">Call (123) 456-7890</a>
+        <a href="tel:1234567890" class="w-full text-center py-2.5 rounded-full bg-[#002b5c] text-white font-bold text-sm shadow-md block">
+          Call (123) 456-7890
+        </a>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- HERO SECTION WITH AUTO-SWITCHING BACKGROUND SLIDESHOW & STANDALONE HERO CARD -->
-    <section class="hero-slider-section">
-      <!-- Background Slides -->
-      <div class="hero-slide active" style="background-image: url('https://res.cloudinary.com/vhth8clt/image/upload/v1788872756/pexels-tima-miroshnichenko-6196677.jpg');"></div>
-      <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/vhth8clt/image/upload/v1788872754/pexels-tima-miroshnichenko-6195121.jpg');"></div>
-      <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/vhth8clt/image/upload/v1788872751/pexels-tima-miroshnichenko-6195277_1.jpg');"></div>
-      <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/vhth8clt/image/upload/v1788872750/pexels-tima-miroshnichenko-6197108.jpg');"></div>
-      
-      <!-- Gradient Overlay -->
-      <div class="hero-overlay"></div>
+    <!-- ==========================================================================
+         HERO SECTION (100% MATCHING REFERENCE IMAGE MOCKUP)
+         ========================================================================== -->
+    <section class="hero-ref-section">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+          
+          <!-- LEFT COLUMN: HIGH CONVERTING TYPOGRAPHY & VALUE PROPS -->
+          <div class="lg:col-span-6 xl:col-span-6 text-center lg:text-left">
+            <div class="font-extrabold tracking-[0.2em] text-xs sm:text-sm text-[#002b5c] uppercase mb-3 inline-block">
+              PROFESSIONAL • RELIABLE • TRUSTED
+            </div>
+            
+            <h1 class="text-3xl sm:text-5xl xl:text-6xl font-black text-[#002b5c] tracking-tight leading-[1.12] mb-4">
+              A Cleaner Home<br>for a Brighter You
+            </h1>
+            
+            <p class="text-slate-600 text-sm sm:text-base lg:text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+              Peoria Home Cleaning Services provides top-quality residential cleaning solutions designed to fit your lifestyle. Sit back, relax, and enjoy a spotless home!
+            </p>
 
-      <!-- HERO CARD (STANDALONE) -->
-      <div class="hero-card-wrapper px-4">
-        <div class="theme-hero-card">
-          <div class="hero-badge">
-            ⭐ Top-Rated House Cleaning
+            <!-- PRIMARY BOOKING BUTTON WITH LARGER PHONE NUMBER -->
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+              <a href="tel:1234567890" class="hero-booking-btn group" aria-label="Book Your Cleaning Phone Call">
+                <svg class="w-5 h-5 text-sky-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                <span class="btn-main-label">Book Your Cleaning</span>
+                <span class="btn-phone-highlight">(123) 456-7890</span>
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
+
+            <!-- 4 FEATURE VALUE PROPS IN A ROW -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2 border-t border-slate-100 lg:border-t-0">
+              <!-- 1. Residential Cleaning -->
+              <div class="hero-prop-card group">
+                <div class="hero-prop-icon-box group-hover:scale-105 transition-transform">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                </div>
+                <div class="hero-prop-text">Residential<br>Cleaning</div>
+              </div>
+
+              <!-- 2. Detailed & Thorough -->
+              <div class="hero-prop-card group">
+                <div class="hero-prop-icon-box group-hover:scale-105 transition-transform">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                </div>
+                <div class="hero-prop-text">Detailed &<br>Thorough</div>
+              </div>
+
+              <!-- 3. Trusted & Insured -->
+              <div class="hero-prop-card group">
+                <div class="hero-prop-icon-box group-hover:scale-105 transition-transform">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                </div>
+                <div class="hero-prop-text">Trusted &<br>Insured</div>
+              </div>
+
+              <!-- 4. Eco-Friendly Products -->
+              <div class="hero-prop-card group">
+                <div class="hero-prop-icon-box group-hover:scale-105 transition-transform">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <div class="hero-prop-text">Eco-Friendly<br>Products</div>
+              </div>
+            </div>
+
           </div>
-          <h1 class="hero-card-title">
-            PEORIA HOME CLEANING SERVICES
-          </h1>
-          <div class="hero-phone-wrap">
-            <a href="tel:1234567890" class="hero-card-phone">
-              (123) 456-7890
-            </a>
+
+          <!-- RIGHT COLUMN: REFERENCE IMAGE (LIVING ROOM & PEORIA CLEANING BUCKET) -->
+          <div class="lg:col-span-6 xl:col-span-6">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-slate-100 group bg-slate-50">
+              <img src="images/hero-bucket-livingroom.png" alt="Peoria Home Cleaning Services Living Room and Supplies" class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent pointer-events-none"></div>
+            </div>
           </div>
-          <div>
-            <a href="tel:1234567890" class="btn-theme-action">
-              <span>📞 CALL NOW</span>
-            </a>
-          </div>
+
         </div>
       </div>
     </section>
 
+    <!-- ==========================================================================
+         OUR CLEANING SERVICES - SEGMENTED CARD BAR SECTION (FROM REFERENCE MOCKUP)
+         ========================================================================== -->
+    <section class="services-ref-section">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <h2 class="text-3xl sm:text-4xl font-black text-[#002b5c] tracking-tight mb-2">
+            Our Cleaning Services
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            From routine cleanings to deep cleans, we've got your home covered.
+          </p>
+        </div>
+
+        <!-- 4-CARD SEGMENTED CONTAINER -->
+        <div class="services-segmented-container">
+          <!-- Card 1: Standard Cleaning -->
+          <a href="#estimate-form" class="service-segmented-card group">
+            <div class="service-segmented-icon">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            </div>
+            <h3 class="service-segmented-title group-hover:text-[#3a5b81] transition-colors">Standard Cleaning</h3>
+            <p class="service-segmented-desc">Keep your home fresh & tidy</p>
+          </a>
+
+          <!-- Card 2: Deep Cleaning -->
+          <a href="#estimate-form" class="service-segmented-card group">
+            <div class="service-segmented-icon">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+            </div>
+            <h3 class="service-segmented-title group-hover:text-[#3a5b81] transition-colors">Deep Cleaning</h3>
+            <p class="service-segmented-desc">A more detailed clean</p>
+          </a>
+
+          <!-- Card 3: Move-In / Move-Out -->
+          <a href="#estimate-form" class="service-segmented-card group">
+            <div class="service-segmented-icon">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="service-segmented-title group-hover:text-[#3a5b81] transition-colors">Move-In / Move-Out</h3>
+            <p class="service-segmented-desc">Start fresh in a clean space</p>
+          </a>
+
+          <!-- Card 4: Custom Cleaning -->
+          <a href="#estimate-form" class="service-segmented-card group">
+            <div class="service-segmented-icon">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="service-segmented-title group-hover:text-[#3a5b81] transition-colors">Custom Cleaning</h3>
+            <p class="service-segmented-desc">Tailored to your needs</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         NAVY BRAND WAVE / RIBBON DIVIDER (FROM REFERENCE MOCKUP)
+         ========================================================================== -->
+    <div class="navy-brand-wave-ribbon">
+      <div class="max-w-6xl mx-auto flex items-center justify-center gap-3 text-xs sm:text-sm font-extrabold tracking-[0.18em] text-white uppercase text-center">
+        <span class="h-px bg-sky-400/30 flex-1 max-w-[60px] sm:max-w-[140px]"></span>
+        <svg class="w-4 h-4 text-sky-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        <span>PEORIA HOME CLEANING SERVICES</span>
+        <svg class="w-4 h-4 text-sky-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+        <span class="h-px bg-sky-400/30 flex-1 max-w-[60px] sm:max-w-[140px]"></span>
+      </div>
+    </div>
+
     <!-- PROMINENT FREE ESTIMATE FORM CARD (STANDALONE SECTION) -->
-    <section id="estimate-form" class="py-12 px-4 bg-white">
+    <section id="estimate-form" class="py-14 px-4 bg-white">
       <div class="theme-estimate-card">
         <div class="form-header-badge">
           <h2 class="form-header-title">FREE ESTIMATE</h2>
@@ -279,7 +403,7 @@
               <option value="Standard Cleaning">House Cleaning / Standard Maid Service</option>
               <option value="Deep Cleaning">Deep Cleaning Service</option>
               <option value="Move-Out Cleaning">Move-In / Move-Out Cleaning</option>
-              <option value="Airbnb Turnover">Airbnb & Vacation Rental Cleaning</option>
+              <option value="Custom Cleaning">Custom / Vacation Rental Cleaning</option>
               <option value="Commercial Cleaning">Office & Commercial Cleaning</option>
             </select>
           </div>
@@ -326,7 +450,7 @@
             <input type="email" name="email_address" placeholder="name@email.com" required class="clean-form-input sm:max-w-md">
           </div>
 
-                    <div>
+          <div>
             <label class="clean-form-label">Message / Additional Details <span class="text-xs font-normal text-slate-500">(Optional)</span></label>
             <textarea name="message" rows="3" placeholder="Tell us about your home (e.g. number of bedrooms/baths, square footage, special cleaning requests, pets)..." class="clean-form-input"></textarea>
           </div>
@@ -341,7 +465,7 @@
     </section>
 
     <!-- TRUST STATS ROW -->
-    <section class="max-w-5xl mx-auto px-4 sm:px-6 my-12">
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 my-10">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div class="trust-stat-box">
           <div class="w-10 h-10 rounded-lg bg-white text-[#002b5c] flex items-center justify-center font-bold text-lg flex-shrink-0 shadow-sm border border-slate-200">⭐</div>
@@ -375,9 +499,9 @@
     </section>
 
     <!-- HOW IT WORKS 3-STEP FLOW -->
-    <section class="py-12 bg-white border-y border-slate-200 mb-16">
+    <section class="py-14 bg-white border-y border-slate-200 mb-14">
       <div class="max-w-5xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-8">
+        <div class="text-center mb-10">
           <span class="inline-block px-3 py-1 rounded-full bg-[#e8f0f8] text-[#002b5c] font-extrabold text-xs uppercase tracking-wider mb-1">
             Simple 3-Step Process
           </span>
@@ -387,21 +511,21 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="p-6 rounded-2xl border border-slate-300 bg-[linear-gradient(145deg,#f8fbfe_0%,#edf4fb_100%)] shadow-sm flex items-start gap-4">
-            <div class="step-card-number">1</div>
+            <div class="w-9 h-9 rounded-full bg-[#002b5c] text-white flex items-center justify-center font-black text-sm flex-shrink-0">1</div>
             <div>
               <h3 class="font-bold text-[#0f172a] text-base mb-1">Request Estimate</h3>
               <p class="text-xs text-slate-600 leading-relaxed">Fill out our quick form or call (123) 456-7890 to tell us your cleaning needs.</p>
             </div>
           </div>
           <div class="p-6 rounded-2xl border border-slate-300 bg-[linear-gradient(145deg,#f8fbfe_0%,#edf4fb_100%)] shadow-sm flex items-start gap-4">
-            <div class="step-card-number">2</div>
+            <div class="w-9 h-9 rounded-full bg-[#002b5c] text-white flex items-center justify-center font-black text-sm flex-shrink-0">2</div>
             <div>
               <h3 class="font-bold text-[#0f172a] text-base mb-1">Connect With Pro</h3>
               <p class="text-xs text-slate-600 leading-relaxed">We connect you with experienced, local independent cleaners in your city.</p>
             </div>
           </div>
           <div class="p-6 rounded-2xl border border-slate-300 bg-[linear-gradient(145deg,#f8fbfe_0%,#edf4fb_100%)] shadow-sm flex items-start gap-4">
-            <div class="step-card-number">3</div>
+            <div class="w-9 h-9 rounded-full bg-[#002b5c] text-white flex items-center justify-center font-black text-sm flex-shrink-0">3</div>
             <div>
               <h3 class="font-bold text-[#0f172a] text-base mb-1">Enjoy Clean Home</h3>
               <p class="text-xs text-slate-600 leading-relaxed">Sit back and relax in a refreshed, sanitized, and spotless living space.</p>
@@ -411,96 +535,49 @@
       </div>
     </section>
 
-    <!-- EXPANDED INFORMATIVE TEXT SECTION 1: QUALITY & DESERT LIVING CARE -->
-    <section class="py-16 bg-white">
+    <!-- ABOUT US SECTION -->
+    <section id="about-us" class="py-16 bg-white">
       <div class="max-w-5xl mx-auto px-4 sm:px-6">
-        <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="text-center max-w-3xl mx-auto mb-12">
           <span class="inline-block px-3.5 py-1 rounded-full bg-[#e8f0f8] text-[#002b5c] font-extrabold text-xs uppercase tracking-wider mb-2">
-            Why Choose Professional Home Cleaning
+            About Peoria Home Cleaning
           </span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0f172a]">
-            Enjoy A Fresh, Spotless & Healthier Living Space
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#002b5c]">
+            Why Homeowners Choose Us
           </h2>
           <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
-            Living in the desert valley means dust, sand, and pollen constantly settle across hard surfaces, carpets, ceiling fans, and vents. Our network of experienced cleaning professionals utilizes advanced microfiber tools, hospital-grade non-toxic disinfectants, and multi-stage HEPA filtration vacuums to preserve your home’s air quality and beauty.
+            Living in Peoria and the surrounding desert valley means dust, sand, and pollen constantly settle across hard surfaces, carpets, ceiling fans, and vents. Our network of experienced cleaning professionals utilizes advanced microfiber tools, hospital-grade non-toxic disinfectants, and multi-stage HEPA filtration vacuums to preserve your home’s air quality and beauty.
           </p>
         </div>
 
-        <!-- REDESIGNED MODERN CLEAN CARDS (LIGHT BLUE / LIGHT GREEN / WHITE) -->
-        <div id="services-overview" class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-          
-          <!-- Card 1: Standard Recurring -->
-          <div class="modern-service-card">
-            <div class="card-bg-overlay" style="background-image: url('https://res.cloudinary.com/vhth8clt/image/upload/v1788872756/pexels-tima-miroshnichenko-6196677.jpg');"></div>
-            <div class="modern-card-badge-blue">
-              <span>Regular Upkeep</span>
-            </div>
-            <div class="modern-card-icon blue-bg">
-              <span>🧼</span>
-            </div>
-            <h3 class="text-2xl font-bold text-[#0f172a] mb-2">Standard Maintenance</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-              Scheduled weekly, bi-weekly, or monthly cleaning designed to keep your home tidy and sanitary without taking up your weekend free time.
-            </p>
-            <ul class="space-y-2 text-xs font-semibold text-slate-700">
-              <li class="flex items-center gap-2"><span class="text-[#002b5c]">✓</span> Dusting surfaces & baseboards</li>
-              <li class="flex items-center gap-2"><span class="text-[#002b5c]">✓</span> Kitchen counter & sink sanitizing</li>
-              <li class="flex items-center gap-2"><span class="text-[#002b5c]">✓</span> Full bathroom scrubbing & mop</li>
-            </ul>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-[#002b5c] transition-all">
+            <div class="text-3xl mb-3">🧼</div>
+            <h3 class="font-bold text-lg text-[#002b5c] mb-2">Hospital-Grade Standards</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">We sanitize high-touch zones, eliminate bathroom scale, and deep-clean tile and grout surfaces thoroughly.</p>
           </div>
-
-          <!-- Card 2: Deep Cleaning -->
-          <div class="modern-service-card">
-            <div class="card-bg-overlay" style="background-image: url('https://res.cloudinary.com/vhth8clt/image/upload/v1788872754/pexels-tima-miroshnichenko-6195121.jpg');"></div>
-            <div class="modern-card-badge-green">
-              <span>Thorough Intensive</span>
-            </div>
-            <div class="modern-card-icon green-bg">
-              <span>🧽</span>
-            </div>
-            <h3 class="text-2xl font-bold text-[#0f172a] mb-2">Deep Sanitization</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-              A comprehensive top-to-bottom reset for homes needing extra attention, targeting limescale, built-up grime, blinds, and high-touch areas.
-            </p>
-            <ul class="space-y-2 text-xs font-semibold text-slate-700">
-              <li class="flex items-center gap-2"><span class="text-[#3a5b81]">✓</span> Soap scum & tile scale removal</li>
-              <li class="flex items-center gap-2"><span class="text-[#3a5b81]">✓</span> Stovetop & appliance detailing</li>
-              <li class="flex items-center gap-2"><span class="text-[#3a5b81]">✓</span> Door frames, sills & switch plates</li>
-            </ul>
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-[#002b5c] transition-all">
+            <div class="text-3xl mb-3">🌱</div>
+            <h3 class="font-bold text-lg text-[#002b5c] mb-2">Eco-Friendly & Safe</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">All products are safe for children, dogs, cats, and delicate natural stone countertops and hardwood floors.</p>
           </div>
-
-          <!-- Card 3: Move-In / Move-Out -->
-          <div class="modern-service-card">
-            <div class="card-bg-overlay" style="background-image: url('https://res.cloudinary.com/vhth8clt/image/upload/v1788872751/pexels-tima-miroshnichenko-6195277_1.jpg');"></div>
-            <div class="modern-card-badge-blue">
-              <span>Turnkey Relocation</span>
-            </div>
-            <div class="modern-card-icon blue-bg">
-              <span>🔑</span>
-            </div>
-            <h3 class="text-2xl font-bold text-[#0f172a] mb-2">Move In / Move Out</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-              Complete empty-home detailing to ensure you recover your security deposit or welcome your family into a spotless new residence.
-            </p>
-            <ul class="space-y-2 text-xs font-semibold text-slate-700">
-              <li class="flex items-center gap-2"><span class="text-[#002b5c]">✓</span> Inside cabinet & drawer wipe</li>
-              <li class="flex items-center gap-2"><span class="text-[#002b5c]">✓</span> Inside oven & refrigerator wash</li>
-              <li class="flex items-center gap-2"><span class="text-[#002b5c]">✓</span> Edge-to-edge floor restoration</li>
-            </ul>
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-[#002b5c] transition-all">
+            <div class="text-3xl mb-3">⭐</div>
+            <h3 class="font-bold text-lg text-[#002b5c] mb-2">100% Satisfaction</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Your satisfaction is our top priority. We connect you with verified local cleaners committed to excellence.</p>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- EXPANDED INFORMATIVE TEXT SECTION 2: ROOM BY ROOM METHODOLOGY -->
-    <section class="py-16 bg-white border-t border-slate-200">
+    <!-- EXPANDED INFORMATIVE TEXT SECTION: ROOM BY ROOM METHODOLOGY -->
+    <section class="py-16 bg-[#f8fbfe] border-t border-slate-200">
       <div class="max-w-5xl mx-auto px-4 sm:px-6">
         <div class="text-center max-w-3xl mx-auto mb-12">
           <span class="inline-block px-3.5 py-1 rounded-full bg-[#e8f0f8] text-[#002b5c] font-extrabold text-xs uppercase tracking-wider mb-2">
             Methodical Process
           </span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0f172a]">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#002b5c]">
             Systematic Cleaning Standards
           </h2>
           <p class="text-slate-600 text-sm sm:text-base mt-2">
@@ -509,40 +586,36 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="protocol-step-card space-y-3">
-            <div class="card-bg-overlay" style="background-image: url('https://res.cloudinary.com/vhth8clt/image/upload/v1788872754/pexels-tima-miroshnichenko-6195121.jpg');"></div>
-            <div class="text-lg font-bold text-[#002b5c]">
-              Kitchen Area Protocol
+          <div class="protocol-step-card space-y-2">
+            <div class="text-lg font-bold text-[#002b5c] flex items-center gap-2">
+              <span>🍳</span> Kitchen Area Protocol
             </div>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               We sanitize countertops, polish stainless steel appliances, scrub sinks and faucets, degrease backsplashes, and mop tile floors to eliminate food oils and odors.
             </p>
           </div>
 
-          <div class="protocol-step-card space-y-3">
-            <div class="card-bg-overlay" style="background-image: url('https://res.cloudinary.com/vhth8clt/image/upload/v1788872750/pexels-tima-miroshnichenko-6197108.jpg');"></div>
-            <div class="text-lg font-bold text-[#3a5b81]">
-              Bathroom Hygiene Protocol
+          <div class="protocol-step-card space-y-2">
+            <div class="text-lg font-bold text-[#002b5c] flex items-center gap-2">
+              <span>🚿</span> Bathroom Hygiene Protocol
             </div>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               We eliminate hard water scale and soap scum from glass shower doors and tubs, sanitize toilet fixtures inside and out, clean mirrors streak-free, and disinfect tile floors.
             </p>
           </div>
 
-          <div class="protocol-step-card space-y-3">
-            <div class="card-bg-overlay" style="background-image: url('https://res.cloudinary.com/vhth8clt/image/upload/v1788872756/pexels-tima-miroshnichenko-6196677.jpg');"></div>
-            <div class="text-lg font-bold text-[#002b5c]">
-              Living & Dining Protocol
+          <div class="protocol-step-card space-y-2">
+            <div class="text-lg font-bold text-[#002b5c] flex items-center gap-2">
+              <span>🛋️</span> Living & Dining Protocol
             </div>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               We remove dust from coffee tables, shelving, ceiling fan blades, and blinds. Upholstery is neatly organized, and all floors are thoroughly vacuumed and mopped.
             </p>
           </div>
 
-          <div class="protocol-step-card space-y-3">
-            <div class="card-bg-overlay" style="background-image: url('https://res.cloudinary.com/vhth8clt/image/upload/v1788872751/pexels-tima-miroshnichenko-6195277_1.jpg');"></div>
-            <div class="text-lg font-bold text-[#3a5b81]">
-              Bedroom & Sleeping Protocol
+          <div class="protocol-step-card space-y-2">
+            <div class="text-lg font-bold text-[#002b5c] flex items-center gap-2">
+              <span>🛏️</span> Bedroom & Sleeping Protocol
             </div>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               We dust all nightstands, lamps, and furniture. Carpets are deep-vacuumed with HEPA filtration to lower allergens, and beds are neatly styled or refreshed upon request.
@@ -552,14 +625,81 @@
       </div>
     </section>
 
-    <!-- VALLEY SERVICE AREAS & CITIES COVERED (RICH SEO INTERNAL LINKING) -->
+    <!-- CUSTOMER REVIEWS / TESTIMONIALS SECTION -->
+    <section id="reviews" class="py-16 bg-white border-t border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-[#e8f0f8] text-[#002b5c] font-extrabold text-xs uppercase tracking-wider mb-2">
+            Verified Feedback
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#002b5c]">
+            What Peoria Homeowners Say
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2">
+            Read real feedback from happy clients across Peoria and surrounding communities.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl border border-slate-200 bg-[#f8fbfe] flex flex-col justify-between shadow-sm">
+            <div>
+              <div class="text-amber-400 text-lg mb-2">★★★★★</div>
+              <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic mb-4">
+                "Finding a dependable house cleaner in Peoria used to be stressful. Peoria Home Cleaning connected us with an amazing team that leaves our house sparkling every single visit!"
+              </p>
+            </div>
+            <div class="border-t border-slate-200 pt-3 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-[#002b5c] text-white font-bold flex items-center justify-center text-xs">SM</div>
+              <div>
+                <div class="font-bold text-xs text-[#0f172a]">Sarah M.</div>
+                <div class="text-[11px] text-slate-500">Vistancia, Peoria</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl border border-slate-200 bg-[#f8fbfe] flex flex-col justify-between shadow-sm">
+            <div>
+              <div class="text-amber-400 text-lg mb-2">★★★★★</div>
+              <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic mb-4">
+                "We scheduled a move-out deep clean for our 4-bedroom home. The kitchen appliances and master shower looked brand new! We got our entire deposit back."
+              </p>
+            </div>
+            <div class="border-t border-slate-200 pt-3 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-[#3a5b81] text-white font-bold flex items-center justify-center text-xs">DK</div>
+              <div>
+                <div class="font-bold text-xs text-[#0f172a]">David K.</div>
+                <div class="text-[11px] text-slate-500">Fletcher Heights, Peoria</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl border border-slate-200 bg-[#f8fbfe] flex flex-col justify-between shadow-sm">
+            <div>
+              <div class="text-amber-400 text-lg mb-2">★★★★★</div>
+              <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic mb-4">
+                "Bi-weekly standard cleaning is the best investment we made this year. Punctual, thorough, and polite cleaners. Highly recommend to everyone in the West Valley!"
+              </p>
+            </div>
+            <div class="border-t border-slate-200 pt-3 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-[#002b5c] text-white font-bold flex items-center justify-center text-xs">EL</div>
+              <div>
+                <div class="font-bold text-xs text-[#0f172a]">Emily L.</div>
+                <div class="text-[11px] text-slate-500">Peoria Pines</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALLEY SERVICE AREAS & CITIES COVERED -->
     <section class="py-16 bg-white border-t border-slate-200">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center max-w-3xl mx-auto mb-12">
           <span class="inline-block px-3.5 py-1 rounded-full bg-[#e8f0f8] text-[#002b5c] font-extrabold text-xs uppercase tracking-wider mb-2">
             Valley Wide Coverage
           </span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0f172a]">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#002b5c]">
             Explore House Cleaning Across The Valley
           </h2>
           <p class="text-slate-600 text-xs sm:text-sm mt-2">
@@ -649,9 +789,9 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           
           <!-- LEFT COLUMN: 9 SERVICE AREAS -->
-          <div class="lg:col-span-5">
-            <h3 class="text-2xl sm:text-3xl font-bold text-[#0f172a] mb-6">Service Areas</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-base">
+          <div class="lg:col-span-5 space-y-4">
+            <h3 class="text-2xl sm:text-3xl font-bold text-[#0f172a] mb-2">Service Areas</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm">
               <a href="cities/phoenix.html" class="service-area-link">Phoenix</a>
               <a href="cities/scottsdale.html" class="service-area-link">Scottsdale</a>
               <a href="cities/tempe.html" class="service-area-link">Tempe</a>
@@ -708,12 +848,12 @@
         </div>
       </div>
 
-      <!-- MANDATORY LEGAL DISCLAIMER IN SMALL CHARACTER -->
+      <!-- MANDATORY LEGAL DISCLAIMER -->
       <div class="pt-6 border-t border-slate-800 text-[11px] sm:text-xs text-slate-400 leading-relaxed max-w-5xl mx-auto text-center sm:text-left">
         <p>This is a marketing website. We do not perform the work ourselves; we connect homeowners with independent local contractors. This site does not warrant or guarantee any work performed, and it is the responsibility of the homeowner to verify that the hired contractor holds the necessary license and insurance for the work being performed. All persons depicted in any photo or video are models and not contractors listed on this site.</p>
       </div>
 
-      <!-- RESERVED RIGHTS LINE BELOW EVERYTHING -->
+      <!-- RESERVED RIGHTS LINE -->
       <div class="pt-4 border-t border-slate-800/60 text-xs text-slate-500 text-center">
         © 2026 Peoria Home Cleaning Services. All rights reserved.
       </div>
