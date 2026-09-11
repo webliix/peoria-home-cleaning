@@ -83,8 +83,48 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  document.addEventListener('click', () => {
-    document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('touch-open'));
+  // Auto-close dropdowns and remove focus when clicking any link inside a dropdown
+  document.querySelectorAll('.nav-dropdown a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('touch-open'));
+      if (document.activeElement && typeof document.activeElement.blur === 'function') {
+        document.activeElement.blur();
+      }
+    });
+  });
+
+  // Close dropdowns on click outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-dropdown')) {
+      document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('touch-open'));
+    }
+  });
+
+  // Smooth scroll handler for anchor links with sticky header offset
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        const targetElem = document.querySelector(targetId);
+        if (targetElem) {
+          e.preventDefault();
+          document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('touch-open'));
+          if (document.activeElement && typeof document.activeElement.blur === 'function') {
+            document.activeElement.blur();
+          }
+          if (mobileDrawer) mobileDrawer.classList.add('hidden');
+
+          const headerOffset = 90;
+          const elementPosition = targetElem.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
   });
 
   // 5. Floating Back to Top Button
